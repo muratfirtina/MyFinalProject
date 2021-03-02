@@ -1,7 +1,7 @@
 ﻿using Business.Concrete;
 using System;
-using DateAccess.Concrete.EntityFramework;
-using DateAccess.Concrete.InMemory;
+using DataAccess.Concrete.EntityFramework;
+using DataAccess.Concrete.InMemory;
 
 namespace ConsoleUI
 {

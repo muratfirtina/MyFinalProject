@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using DateAccess.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 
-namespace DateAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFramework
 {
     //NuGet
     public class EfProductDal : IProductDal
@@ -17,9 +17,9 @@ namespace DateAccess.Concrete.EntityFramework
             //IDisposible pattern implementation of c#
             using (NorthwindContext context = new NorthwindContext())
             {
-                var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                context.SaveChanges();
+                var addedEntity = context.Entry(entity); 
+                addedEntity.State = EntityState.Added;   //set et
+                context.SaveChanges(); // değişikliği kaydet (ekle)
             }
         }
 
@@ -27,7 +27,7 @@ namespace DateAccess.Concrete.EntityFramework
         {
             using (NorthwindContext context = new NorthwindContext())
             {
-                var deletedEntity = context.Entry(entity);
+                var deletedEntity = context.Entry(entity); //veri kaydağından referansı bul
                 deletedEntity.State = EntityState.Deleted;
                 context.SaveChanges();
             }
@@ -46,8 +46,8 @@ namespace DateAccess.Concrete.EntityFramework
             using (NorthwindContext context = new NorthwindContext())
             {
                 return filter == null 
-                    ? context.Set<Product>().ToList() 
-                    : context.Set<Product>().Where(filter).ToList();
+                    ? context.Set<Product>().ToList() //filtre null sa bu kısım çalışır yani veri tabanında ki bütün prduct tablosunu listeye çevir bana ver.
+                    : context.Set<Product>().Where(filter).ToList();//null değilse bu kısım filtreleyip ver.
             }
         }
 

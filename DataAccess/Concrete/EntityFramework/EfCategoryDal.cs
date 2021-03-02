@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using DateAccess.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 
-namespace DateAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCategoryDal : ICategoryDal
     {
