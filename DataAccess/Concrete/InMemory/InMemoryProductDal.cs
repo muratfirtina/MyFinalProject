@@ -80,5 +80,5 @@ namespace DataAccess.Concrete.InMemory
         {
             throw new NotImplementedException();
         }
-    }      //where koşulu içindeki şarta uyanbütün elemanları yeni bir liste haline getirir ve onu döndürür.
+    }      //where koşulu içindeki şarta uyan bütün elemanları yeni bir liste haline getirir ve onu döndürür.
 }
