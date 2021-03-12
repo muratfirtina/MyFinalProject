@@ -30,7 +30,7 @@ namespace DataAccess.Concrete.InMemory
             return _products;
         }
 
-        public void add(Product product)
+        public void Add(Product product)
         {
             _products.Add(product);
         }
