@@ -11,7 +11,7 @@ namespace ConsoleUI
         //Open Closed Principle
         static void Main(string[] args)
         { 
-            ProductTest();
+            //ProductTest();
             //CategoryTest();
         }
 
